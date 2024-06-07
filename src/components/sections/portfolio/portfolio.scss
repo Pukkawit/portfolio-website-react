@@ -105,12 +105,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include tablet {
+  }
 }
 .coded-design {
   font-size: 0.6rem;
   font-weight: 300;
   font-style: italic;
   margin-bottom: 1rem;
+  @include tablet {
+    margin: 0 !important;
+  }
 }
 .eatsome {
   text-transform: lowercase;
@@ -123,6 +128,9 @@
   font-weight: 200;
   margin-bottom: 15px;
   text-align: center;
+  @include tablet {
+    margin-bottom: 0 !important;
+  }
 }
 .text-on-top h4 {
   border-left: 0.13rem solid #fff;
@@ -141,6 +149,9 @@
   display: flex;
   align-items: center;
   column-gap: 15px;
+  @include tablet {
+    margin-top: 8px !important;
+  }
 }
 
 .demo-more h4:hover {
