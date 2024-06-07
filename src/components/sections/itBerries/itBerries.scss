@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import '../../scss/_includes.scss';
+
+#itBerries {
+  font-family: 'Open Sans', sans-serif;
+  padding: 1.5rem 3rem;
+  background-color: #1d1d1d;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#itBerries h2 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+#itBerries p {
+  font-size: 0.7rem;
+  color: #fff;
+  position: relative;
+  width: 60vw;
+  margin-bottom: 1rem;
+  z-index: 1;
+  @include mobile {
+    text-align: center;
+  }
+}
+#itBerries img {
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  right: -25vh;
+  top: -15vh;
+  z-index: -1;
+  transform: rotate(20deg);
+  @include tablet {
+    transform: rotate(0);
+    top: -28%;
+    left: 50%;
+    width: 50vw;
+    transform: translate(-50%, 0);
+  }
+  @include mobile {
+    transform: rotate(0);
+    top: 0;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%, 0);
+  }
+}
+#itBerries button {
+  color: #fff;
+  border-color: #fff;
+  z-index: 1;
+}
+#itBerries button:hover {
+  color: #b3b3b3;
+  border-color: #b3b3b3;
+}

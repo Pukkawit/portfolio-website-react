@@ -1,0 +1,120 @@
+@import '../../scss/includes';
+
+#nav {
+  .hide {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  color: #fff;
+  z-index: 2;
+
+  .logo {
+    width: 30px;
+  }
+  .logo-white {
+    position: relative;
+    left: -30px;
+    display: none;
+
+    @include mobile {
+      width: 25px;
+      position: relative;
+      left: 30px;
+      top: -30px;
+      display: block;
+    }
+  }
+  .toggle {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 0.5rem;
+
+    .toggle {
+      display: none;
+    }
+    @include tablet {
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 20px 0;
+      padding-top: 40px;
+      background-color: #1d1d1d;
+      width: 250px;
+      align-items: center;
+      border-radius: 0 0 0 8px;
+      box-shadow: 0 2px 8px rgba($color: #ffffff, $alpha: 0.5);
+      z-index: 1;
+      display: none;
+    }
+    li {
+      list-style: none;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 7rem;
+      text-align: center;
+      padding: 0.4rem 0;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      @include tablet {
+        font-size: 0.9rem;
+      }
+      &:hover {
+        opacity: 0.8;
+        background-color: #383838;
+        border-radius: 1rem;
+        @include tablet {
+          border-radius: unset;
+          background-color: #fff;
+          width: 100%;
+          color: unset;
+          color: #000;
+        }
+      }
+    }
+    .contact-me {
+      background-color: #fff;
+      color: #000;
+      border-radius: 1rem;
+      &:hover {
+        background-color: #fff;
+        @include tablet {
+          background-color: unset;
+
+          @include tablet {
+            border-radius: unset;
+            background-color: #fff;
+            width: 100%;
+            color: #000;
+          }
+        }
+      }
+      @include tablet {
+        background-color: unset;
+        color: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  --bg-color: #d7d7d7;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: 100vh;
+}
+header {
+  background-color: var(--bg-color);
+}
+nav {
+  background-color: transparent;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+footer {
+  height: 70px;
+  background-color: #242424;
+  color: #fff;
+  padding: 1rem 2rem;
+}
